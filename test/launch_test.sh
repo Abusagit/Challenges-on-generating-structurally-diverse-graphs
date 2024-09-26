@@ -1,0 +1,1 @@
+python ../pipeline.py --threads 12 --mode genetic --config test.json --outdir test_2 --force --volume energy --analyze

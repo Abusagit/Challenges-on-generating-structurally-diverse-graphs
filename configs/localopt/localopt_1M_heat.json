@@ -1,0 +1,166 @@
+{
+    "equal_sample_size_per_model": true,
+    "samples": 100,
+    "nodes": 16,
+    "orca_path": "./orca",
+    "models":
+    {
+        "ER": [{"p": 0.0625},
+                {"p": 0.125},
+                {"p": 0.25},
+                {"p": 0.5},
+                {"p": 0.75},
+                {"p": 0.875},
+                {"p": 0.9375}      
+    ],
+        "Regular": [
+            {"d": 1},
+            {"d": 2},
+            {"d": 4},
+            {"d": 8}
+    ],
+        "PA": [
+            {"m": 1, "zero_appeal": 0.5},
+            {"m": 2, "zero_appeal": 1},
+            {"m": 4, "zero_appeal": 2}, 
+            {"m": 1, "zero_appeal": 1},
+            {"m": 2, "zero_appeal": 2},
+            {"m": 4, "zero_appeal": 4}, 
+            {"m": 1, "zero_appeal": 2},
+            {"m": 2, "zero_appeal": 4},
+            {"m": 4, "zero_appeal": 8}
+        ],
+        "SBM": [
+            {"block_sizes": [8, 8], "pref_matrix":
+            [[0.0625, 0.125], 
+            [0.125, 0.0625]]
+        },
+            {"block_sizes": [8, 8], "pref_matrix":
+            [[0.125, 0.0625], 
+            [0.0625, 0.125]]
+        },
+    
+            {"block_sizes": [8, 8], "pref_matrix":
+            [[0.125, 0.25], 
+            [0.25, 0.125]]
+        },
+            {"block_sizes": [8, 8], "pref_matrix":
+            [[0.25, 0.125], 
+            [0.125, 0.25]]
+            },
+    
+    
+            {"block_sizes": [8, 8], "pref_matrix":
+            [[0.25, 0.5], 
+            [0.5, 0.25]]
+        },
+            {"block_sizes": [8, 8], "pref_matrix":
+            [[0.5, 0.25], 
+            [0.25, 0.5]]
+            },
+    
+            {"block_sizes": [8, 8], "pref_matrix":
+            [[1, 0.5], 
+            [0.5, 1]]
+        },
+            {"block_sizes": [8, 8], "pref_matrix":
+            [[0.5, 1], 
+            [1, 0.5]]
+            },
+    
+            {"block_sizes": [5, 5, 6], "pref_matrix":
+            [[0.125, 0.0625, 0.0625], 
+            [0.0625, 0.125, 0.0625],
+            [0.0625, 0.0625, 0.125]]
+        },
+            {"block_sizes": [5, 5, 6], "pref_matrix":
+            [[0.0625, 0.125, 0.125], 
+            [0.125, 0.0625, 0.125],
+            [0.125, 0.125, 0.0625]]
+        },
+            {"block_sizes": [5, 5, 6], "pref_matrix":
+            [[0.125, 0.25, 0.25], 
+            [0.25, 0.125, 0.25],
+            [0.25, 0.25, 0.125]]
+        },
+            {"block_sizes": [5, 5, 6], "pref_matrix":
+            [[0.25, 0.125, 0.125], 
+            [0.125, 0.25, 0.125],
+            [0.125, 0.125, 0.25]]
+        },
+            {"block_sizes": [5, 5, 6], "pref_matrix":
+            [[0.25, 0.5, 0.5], 
+            [0.5, 0.25, 0.5],
+            [0.5, 0.5, 0.25]]
+        },
+            {"block_sizes": [5, 5, 6], "pref_matrix":
+            [[0.5, 0.25, 0.25], 
+            [0.25, 0.5, 0.25],
+            [0.25, 0.25, 0.5]]
+        },
+            {"block_sizes": [5, 5, 6], "pref_matrix":
+            [[0.5, 1, 1], 
+            [1, 0.5, 1],
+            [1, 1, 0.5]]
+        },
+            {"block_sizes": [5, 5, 6], "pref_matrix":
+            [[1, 0.5, 0.5], 
+            [0.5, 1, 0.5],
+            [0.5, 0.5, 1]]
+        }
+        ],
+    
+    
+        "RGG_nx": [
+            {"radius": 0.2, "dim": 2},
+            {"radius": 0.3, "dim": 2},
+            {"radius": 0.5, "dim": 2},
+    
+            {"radius": 0.33, "dim": 3},
+            {"radius": 0.5, "dim": 3},
+            {"radius": 0.65, "dim": 3}
+        ],
+    
+        "PowerlawCluster": [
+            {"m": 2, "p": 0.5},
+            {"m": 2, "p": 1},
+            {"m": 4, "p": 0.5},
+            {"m": 4, "p": 1}
+        ],
+    
+        "PowerlawSequence": [
+            {"gamma": 2},
+            {"gamma": 2.5},
+            {"gamma": 3},
+            {"gamma": 4}
+        ]
+    },
+    "distances": 
+        {
+
+            "netLSD_heat" :  [
+                {}]
+        },
+    "greedy": {
+        "initial_graphs": ["mix"],
+        "sampling_size": 300
+    },
+    "genetic": {
+        "initial_graphs": 
+            [
+             "ER"
+            ],
+        "mutation_prob":
+            [0.2],
+        "max_failed_attempts": 
+            [3],
+        "total_attempts": 
+            [30]
+    },
+    "localopt": {
+        "initial_graphs":
+        ["user"],
+        "max_failed_attempts": [10000000],
+        "total_attempts": [10000000, 10000000, 10000000, 10000000]
+    }
+}
