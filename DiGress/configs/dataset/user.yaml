@@ -1,0 +1,8 @@
+name: user
+remove_h: null
+datadir: 'data/user_train_val/'
+graphs_file: /home/fvelikon/projects/DiGress/GCD_train_val_1k_each.npz  #/home/fvelikon/projects/DiGress/GCD_greedy_1k.npy
+
+#/home/fvelikon/projects/DiGress/1k_graphs.pkl.npy
+
+# /home/fvelikon/projects/graph_diversity_problems/data/graphs/6750_from_statistical_models.pkl

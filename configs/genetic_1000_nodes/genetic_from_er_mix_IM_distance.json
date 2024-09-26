@@ -1,0 +1,43 @@
+{
+    "equal_sample_size_per_model": true,
+    "samples": 100,
+    "nodes": 1000,
+    "orca_path": "./orca",
+    "models":
+    {
+        "ER": [{"p": 0.0625},
+                {"p": 0.125},
+                {"p": 0.25},
+                {"p": 0.5},
+                {"p": 0.75},
+                {"p": 0.875},
+                {"p": 0.9375}
+            ]
+    },
+    "distances": 
+        {
+            "quantumJSD_approx": [{}]
+        },
+    "greedy": {
+        "initial_graphs": ["mix"],
+        "sampling_size": 100
+    },
+    "genetic": {
+        "initial_graphs": 
+            [
+             "mix"
+            ],
+        "mutation_prob":
+            [0.2],
+        "max_failed_attempts": 
+            [10],
+        "total_attempts": 
+            [30000]
+    },
+    "localopt": {
+        "initial_graphs":
+        ["ER"],
+        "max_failed_attempts": [3],
+        "total_attempts": [30]
+    }
+}
