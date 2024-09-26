@@ -1,20 +1,7 @@
-notebooks/.ipynb_checkpoints/*
 .ipynb_checkpoints/*
 __pycache__/*
-data/*
-configs/nips/*
 
 .vscode/
 
-results/*
-
 *.pkl
 *.html
-
-data
-results
-results_initial
-
-notebooks/*/*.png
-notebooks/*/*.pdf
-notebooks/*.pdf
