@@ -1,6 +1,8 @@
 # Challenges on generating structurally diverse graphs
 ## Description
-This repository contains code used in the article "Challenges of Generating Structurally Diverse Graphs" as well as notebooks for analysis and implemented greedy and genetic algorithms.
+This repository contains code used in the article "Challenges of Generating Structurally Diverse Graphs" on NeurIPS-2024 as well as notebooks for analysis and implemented greedy and genetic algorithms.
+
+[Paper link on arxiv](https://arxiv.org/abs/2409.18859)
 
 ## Installation
 
